@@ -1,5 +1,4 @@
 resource "/posts" do
-  create do
-    ...
+  list do
   end
 end
