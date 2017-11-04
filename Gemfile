@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-gem "pakyow", path: "../"
+gem "pakyow", github: "pakyow/pakyow", branch: "master"
 
 # app server
 gem "puma", platforms: :ruby
