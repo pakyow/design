@@ -13,4 +13,4 @@ group :test do
   gem "rspec"
 end
 
-# your gems here
+gem "pg"

@@ -1,12 +1,7 @@
-# options passed to the adapter; both are optional in
-# this case, but needed with multiple connections
-data adapter: :sql, connection: :default do
+model :posts do
+  primary_id
   timestamps
 
-  attribute :title, String
-  attribute :body,  String
-
-  def by_id(id)
-    where(id: id)
-  end
+  attribute :title, :string
+  attribute :body, :string
 end

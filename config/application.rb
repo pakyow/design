@@ -1,12 +1,12 @@
 require "pakyow/core"
+require "pakyow/presenter"
+require "pakyow/data"
 
 Pakyow::App.define do
+  include Pakyow::Presenter
+
   configure do
     config.app.name = "design"
-
-    config.data.adapter :sql do
-      connection :default, ENV["DATABASE_URL"]
-    end
   end
 
   configure :development do
