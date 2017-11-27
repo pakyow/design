@@ -3,18 +3,18 @@ resource :post, "/posts" do
     presentable :posts, data.posts.all
   end
 
-  create do
-    verify do
-      required :post do
-        required :title do
-          validate :presence
-        end
-
-        optional :body
-        optional :published, :boolean
+  verify :create do
+    required :post do
+      required :title do
+        validate :presence
       end
-    end
 
+      optional :body
+      optional :published, :boolean
+    end
+  end
+
+  create do
     data.posts.create(params[:post])
   end
 end
