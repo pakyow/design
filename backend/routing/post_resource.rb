@@ -14,6 +14,10 @@ resource :post, "/posts" do
     end
   end
 
+  handle InvalidData, as: :bad_request do
+    logger.error "invalid #{req.error.verifier.errors.inspect}"
+  end
+
   create do
     data.posts.create(params[:post])
   end
