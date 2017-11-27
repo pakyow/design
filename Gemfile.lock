@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/pakyow/pakyow.git
-  revision: 5c71b1f525b1e23a690dab9a40adb75159cac2f1
+  revision: dd5a04e486ee3f14e1c6d2977d267fc80249b8d9
   branch: master
   specs:
     pakyow (1.0.0.pre.alpha)
@@ -24,8 +24,8 @@ GIT
     pakyow-data (1.0.0.pre.alpha)
       concurrent-ruby (~> 1.0)
       pakyow-support (= 1.0.0.pre.alpha)
-      rom
-      rom-sql
+      rom (~> 4.1)
+      rom-sql (~> 2.3)
     pakyow-mailer (1.0.0.pre.alpha)
       mail (~> 2.7)
       pakyow-core (= 1.0.0.pre.alpha)

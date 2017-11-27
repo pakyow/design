@@ -6,8 +6,12 @@ resource :post, "/posts" do
   create do
     verify do
       required :post do
-        optional :title
-        required :body
+        required :title do
+          validate :presence
+        end
+
+        optional :body
+        optional :published, :boolean
       end
     end
 
