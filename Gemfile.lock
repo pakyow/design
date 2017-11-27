@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/pakyow/pakyow.git
-  revision: dd5a04e486ee3f14e1c6d2977d267fc80249b8d9
+  revision: bf13d05b1a1b0733de70f74cb252a81e41c97485
   branch: master
   specs:
     pakyow (1.0.0.pre.alpha)
@@ -123,7 +123,7 @@ GEM
       css_parser (>= 1.6.0)
       htmlentities (>= 4.0.0)
     public_suffix (3.0.1)
-    puma (3.10.0)
+    puma (3.11.0)
     rack (2.0.3)
     rack-protection (1.5.3)
       rack
