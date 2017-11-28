@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/pakyow/pakyow.git
-  revision: a42ec04befee89071af13963121d53a41fd86b50
+  revision: 8da9e0e1bed834918b17a11dd973c08dfb392f88
   branch: master
   specs:
     pakyow (1.0.0.pre.alpha)
