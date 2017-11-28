@@ -15,7 +15,8 @@ resource :post, "/posts" do
   end
 
   handle InvalidData, as: :bad_request do
-    logger.error "invalid #{req.error.verifier.errors.inspect}"
+    logger.error "errored fields: #{req.error.verifier.errors.inspect}"
+    logger.error "messages: #{req.error.verifier.messages.inspect}"
   end
 
   create do
