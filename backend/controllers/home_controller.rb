@@ -1,4 +1,4 @@
-router "/" do
+controller :home, "/" do
   default do
     redirect :post_list, as: 301
   end

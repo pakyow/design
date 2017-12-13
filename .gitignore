@@ -6,3 +6,7 @@
 
 # ignore binstubs
 bin
+
+node_modules
+
+tmp

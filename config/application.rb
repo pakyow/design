@@ -1,10 +1,5 @@
-require "pakyow/core"
-
-Pakyow::App.define do
+Pakyow.app :design do
   configure do
-    config.app.name = "design"
-  end
-
-  configure :development do
+    config.protection.enabled = false
   end
 end
