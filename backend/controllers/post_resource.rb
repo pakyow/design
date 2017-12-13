@@ -20,9 +20,6 @@ resource :post, "/posts" do
 
   show do
     presentable :post, data.posts.by_id(params[:post_id])
-
-    # FIXME: we shouldn't have to render this explicitly
-    render "/posts/show"
   end
 
   create do
