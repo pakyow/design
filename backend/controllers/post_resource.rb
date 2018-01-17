@@ -1,6 +1,6 @@
 resource :post, "/posts" do
   list do
-    presentable :posts_data, data.posts.published
+    expose :posts, data.posts.published
   end
 
   verify :create do

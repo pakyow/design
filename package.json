@@ -1,0 +1,9 @@
+{
+  "name": "design",
+  "private": true,
+  "dependencies": {
+    "@pakyow/assets": "../pakyow/pakyow-assets",
+    "@pakyow/js": "../pakyow/pakyow-js",
+    "file-loader": "^1.1.6"
+  }
+}

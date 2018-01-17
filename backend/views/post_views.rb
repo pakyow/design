@@ -1,5 +1,5 @@
 view "/posts" do
-  find(:post).present(posts_data)
+  find(:post).present(posts)
 end
 
 view "/posts/show" do

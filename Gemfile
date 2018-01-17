@@ -14,3 +14,6 @@ group :test do
 end
 
 gem "pg"
+
+# TODO: things go south when this is commented out; can we catch these and provide instructions to the user?
+gem "sass"
