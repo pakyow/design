@@ -19,7 +19,7 @@ resource :post, "/posts" do
   end
 
   show do
-    presentable :post, data.posts.by_id(params[:post_id])
+    expose :post, data.posts.by_id(params[:post_id])
   end
 
   create do
