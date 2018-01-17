@@ -11,4 +11,4 @@ node_modules
 
 tmp
 
-public/assets
+public/compiled
