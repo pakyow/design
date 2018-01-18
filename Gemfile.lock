@@ -1,12 +1,11 @@
 GIT
   remote: git://github.com/pakyow/pakyow.git
-  revision: e820961835bd5f0de0ff8f8e8814023728374132
+  revision: bb1a75a1d7aaf1b41ad86903ad2e2570d4dce7b1
   branch: master
   specs:
     pakyow (1.0.0.pre.alpha)
       bundler (~> 1.13)
       listen (~> 3.1)
-      pakyow-assets (= 1.0.0.pre.alpha)
       pakyow-core (= 1.0.0.pre.alpha)
       pakyow-data (= 1.0.0.pre.alpha)
       pakyow-mailer (= 1.0.0.pre.alpha)
@@ -18,10 +17,7 @@ GIT
       pakyow-ui (= 1.0.0.pre.alpha)
       pastel (~> 0.7)
       rack (~> 2.0)
-      rack-protection (~> 1.5)
       thor (~> 0.19)
-    pakyow-assets (1.0.0.pre.alpha)
-      rack-proxy
     pakyow-core (1.0.0.pre.alpha)
       pakyow-support (= 1.0.0.pre.alpha)
     pakyow-data (1.0.0.pre.alpha)
@@ -130,10 +126,6 @@ GEM
     public_suffix (3.0.1)
     puma (3.11.0)
     rack (2.0.3)
-    rack-protection (1.5.3)
-      rack
-    rack-proxy (0.6.3)
-      rack
     rake (12.3.0)
     rb-fsevent (0.10.2)
     rb-inotify (0.9.10)
