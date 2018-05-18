@@ -1,5 +1,5 @@
 extend_controller :admin do
-  resource :post, "/posts" do
+  resources :posts, "/posts" do
     list do
       logger.debug "in admin list"
     end

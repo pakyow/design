@@ -1,4 +1,4 @@
-model :posts do
+source :posts do
   primary_id
   timestamps
 
