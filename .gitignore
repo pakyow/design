@@ -7,8 +7,5 @@
 # ignore binstubs
 bin
 
-node_modules
-
+# ignore temporary files
 tmp
-
-public/compiled

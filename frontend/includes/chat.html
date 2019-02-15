@@ -1,0 +1,25 @@
+<div ui="chat">
+  <article binding="message">
+    <p binding="content">
+      content goes here
+    </p>
+  </article>
+
+  <p binding="message" version="empty">
+    try creating a message
+  </p>
+
+  <form binding="message">
+    <fieldset>
+      <ul>
+        <li>
+          <input binding="content" type="text" placeholder="type a message">
+        </li>
+
+        <li>
+          <input type="submit" value="Create">
+        </li>
+      </ul>
+    </fieldset>
+  </form>
+</div>

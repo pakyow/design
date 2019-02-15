@@ -1,19 +1,19 @@
 source "https://rubygems.org"
+git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-gem "pakyow", github: "pakyow/pakyow", branch: "master"
+gem "pakyow", github: "pakyow/pakyow", branch: "master", require: "pakyow/all"
+gem "pakyow-markdown", github: "pakyow/markdown", branch: "master"
 
-# app server
-gem "puma", platforms: :ruby
-gem "thin", platforms: :mswin
-
-# use dotenv to load environment variables
 gem "dotenv"
+gem "pg"
+gem "puma"
+gem "sassc"
+gem "sqlite3"
+
+group :development do
+  gem "bootsnap", require: false
+end
 
 group :test do
   gem "rspec"
 end
-
-gem "pg"
-
-# TODO: things go south when this is commented out; can we catch these and provide instructions to the user?
-gem "sass"

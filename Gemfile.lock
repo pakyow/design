@@ -1,10 +1,19 @@
 GIT
-  remote: git://github.com/pakyow/pakyow.git
-  revision: 7613fd694716ce2697581a8d5341ecb49cd27ebe
+  remote: https://github.com/pakyow/markdown.git
+  revision: 2e6f2da506a263d0f059ade177af840b89906047
+  branch: master
+  specs:
+    pakyow-markdown (2.0.0.alpha1)
+      pakyow-core (~> 1.0.alpha1)
+      redcarpet (~> 3.4)
+      rouge (~> 3.1)
+
+GIT
+  remote: https://github.com/pakyow/pakyow.git
+  revision: cda1d6803ca0b1d91ec48cd5ee97a7b769e844d1
   branch: master
   specs:
     pakyow (1.0.0.alpha1)
-      bundler (~> 1.16)
       pakyow-assets (= 1.0.0.alpha1)
       pakyow-core (= 1.0.0.alpha1)
       pakyow-data (= 1.0.0.alpha1)
@@ -16,13 +25,17 @@ GIT
       pakyow-support (= 1.0.0.alpha1)
       pakyow-ui (= 1.0.0.alpha1)
     pakyow-assets (1.0.0.alpha1)
+      execjs (~> 2.7)
       http (~> 4.0)
       pakyow-core (= 1.0.0.alpha1)
       pakyow-presenter (= 1.0.0.alpha1)
       pakyow-routing (= 1.0.0.alpha1)
       pakyow-support (= 1.0.0.alpha1)
+      sassc (~> 2.0)
+      source_map (~> 3.0)
       uglifier (~> 4.1)
     pakyow-core (1.0.0.alpha1)
+      bundler (>= 1.17)
       dry-types (~> 0.13)
       filewatcher (~> 1.1)
       http (~> 4.0)
@@ -31,11 +44,12 @@ GIT
       rack (~> 2.0)
       rake (~> 12.3)
     pakyow-data (1.0.0.alpha1)
-      concurrent-ruby (~> 1.0)
+      concurrent-ruby (~> 1.1)
+      connection_pool (~> 2.2)
       dry-types (~> 0.13)
       pakyow-core (= 1.0.0.alpha1)
       pakyow-support (= 1.0.0.alpha1)
-      sequel (~> 5.13)
+      sequel (~> 5.15)
     pakyow-form (1.0.0.alpha1)
       pakyow-core (= 1.0.0.alpha1)
       pakyow-data (= 1.0.0.alpha1)
@@ -59,22 +73,22 @@ GIT
       pakyow-support (= 1.0.0.alpha1)
       redcarpet (~> 3.4)
     pakyow-realtime (1.0.0.alpha1)
-      concurrent-ruby (~> 1.0)
+      concurrent-ruby (~> 1.1)
       nio4r (~> 2.3)
       pakyow-core (= 1.0.0.alpha1)
       pakyow-routing (= 1.0.0.alpha1)
       pakyow-support (= 1.0.0.alpha1)
-      redis (~> 4.0)
+      redis (~> 4.1)
       websocket-driver (~> 0.7)
     pakyow-routing (1.0.0.alpha1)
       pakyow-core (= 1.0.0.alpha1)
       pakyow-support (= 1.0.0.alpha1)
     pakyow-support (1.0.0.alpha1)
-      concurrent-ruby (~> 1.0)
+      concurrent-ruby (~> 1.1)
       dry-inflector (~> 0.1)
       pastel (~> 0.7)
       tty-command (~> 0.8)
-      tty-spinner (~> 0.8)
+      tty-spinner (~> 0.9)
     pakyow-ui (1.0.0.alpha1)
       pakyow-core (= 1.0.0.alpha1)
       pakyow-data (= 1.0.0.alpha1)
@@ -86,44 +100,48 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
-    addressable (2.5.2)
+    addressable (2.6.0)
       public_suffix (>= 2.0.2, < 4.0)
     ansi (1.5.0)
     ast (2.4.0)
-    concurrent-ruby (1.1.3)
-    css_parser (1.6.0)
+    bootsnap (1.4.0)
+      msgpack (~> 1.0)
+    concurrent-ruby (1.1.4)
+    connection_pool (2.2.2)
+    css_parser (1.7.0)
       addressable
     diff-lcs (1.3)
     domain_name (0.5.20180417)
       unf (>= 0.0.5, < 1.0.0)
-    dotenv (2.5.0)
-    dry-configurable (0.7.0)
+    dotenv (2.6.0)
+    dry-configurable (0.8.1)
       concurrent-ruby (~> 1.0)
-    dry-container (0.6.0)
+      dry-core (~> 0.4, >= 0.4.7)
+    dry-container (0.7.0)
       concurrent-ruby (~> 1.0)
       dry-configurable (~> 0.1, >= 0.1.3)
     dry-core (0.4.7)
       concurrent-ruby (~> 1.0)
     dry-equalizer (0.2.1)
     dry-inflector (0.1.2)
-    dry-logic (0.4.2)
+    dry-logic (0.5.0)
       dry-container (~> 0.2, >= 0.2.6)
       dry-core (~> 0.2)
       dry-equalizer (~> 0.2)
-    dry-types (0.13.2)
+    dry-types (0.14.0)
       concurrent-ruby (~> 1.0)
       dry-container (~> 0.3)
       dry-core (~> 0.4, >= 0.4.4)
       dry-equalizer (~> 0.2)
       dry-inflector (~> 0.1, >= 0.1.2)
-      dry-logic (~> 0.4, >= 0.4.2)
+      dry-logic (~> 0.5, >= 0.5)
     equatable (0.5.0)
     execjs (2.7.0)
     ffi (1.9.25)
     filewatcher (1.1.1)
       optimist (~> 3.0)
     htmlentities (4.3.4)
-    http (4.0.0)
+    http (4.0.5)
       addressable (~> 2.3)
       http-cookie (~> 1.0)
       http-form_data (~> 2.0)
@@ -132,10 +150,12 @@ GEM
       domain_name (~> 0.5)
     http-form_data (2.1.1)
     http_parser.rb (0.6.0)
+    json (2.1.0)
     mail (2.7.1)
       mini_mime (>= 0.1.1)
     method_source (0.9.2)
     mini_mime (1.0.1)
+    msgpack (1.2.6)
     nio4r (2.3.1)
     oga (2.15)
       ast
@@ -144,16 +164,14 @@ GEM
     pastel (0.7.2)
       equatable (~> 0.5.0)
       tty-color (~> 0.4.0)
-    pg (1.1.3)
+    pg (1.1.4)
     public_suffix (3.0.3)
     puma (3.12.0)
     rack (2.0.6)
-    rake (12.3.1)
-    rb-fsevent (0.10.3)
-    rb-inotify (0.9.10)
-      ffi (>= 0.5.0, < 2)
+    rake (12.3.2)
     redcarpet (3.4.0)
-    redis (4.0.3)
+    redis (4.1.0)
+    rouge (3.3.0)
     rspec (3.8.0)
       rspec-core (~> 3.8.0)
       rspec-expectations (~> 3.8.0)
@@ -170,19 +188,20 @@ GEM
     ruby-ll (2.1.2)
       ansi
       ast
-    sass (3.7.2)
-      sass-listen (~> 4.0.0)
-    sass-listen (4.0.0)
-      rb-fsevent (~> 0.9, >= 0.9.4)
-      rb-inotify (~> 0.9, >= 0.9.7)
-    sequel (5.14.0)
+    sassc (2.0.0)
+      ffi (~> 1.9.6)
+      rake
+    sequel (5.17.0)
+    source_map (3.0.1)
+      json
+    sqlite3 (1.4.0)
     tty-color (0.4.3)
     tty-command (0.8.2)
       pastel (~> 0.7.0)
     tty-cursor (0.6.0)
-    tty-spinner (0.8.0)
-      tty-cursor (>= 0.5.0)
-    uglifier (4.1.19)
+    tty-spinner (0.9.0)
+      tty-cursor (~> 0.6.0)
+    uglifier (4.1.20)
       execjs (>= 0.3.0, < 3)
     unf (0.1.4)
       unf_ext
@@ -195,13 +214,15 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bootsnap
   dotenv
   pakyow!
+  pakyow-markdown!
   pg
   puma
   rspec
-  sass
-  thin
+  sassc
+  sqlite3
 
 BUNDLED WITH
-   1.16.6
+   1.17.2

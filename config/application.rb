@@ -1,1 +1,4 @@
-Pakyow.app :design
+Pakyow.app :design do
+  configure do
+  end
+end
