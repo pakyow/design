@@ -2,7 +2,7 @@
 .bundle
 
 # ignore environment files
-.env*
+.env.local
 
 # ignore binstubs
 bin

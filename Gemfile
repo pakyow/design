@@ -6,8 +6,6 @@ gem "pakyow-markdown", github: "pakyow/markdown", branch: "master"
 
 gem "dotenv"
 gem "pg"
-gem "puma"
-gem "sassc"
 gem "sqlite3"
 
 group :development do
