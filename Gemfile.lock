@@ -114,8 +114,8 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
-    addressable (2.7.0)
-      public_suffix (>= 2.0.2, < 5.0)
+    addressable (2.8.1)
+      public_suffix (>= 2.0.2, < 6.0)
     ansi (1.5.0)
     ast (2.4.0)
     async (1.24.2)
@@ -206,7 +206,7 @@ GEM
     protocol-websocket (0.7.4)
       protocol-http (~> 0.2)
       protocol-http1 (~> 0.2)
-    public_suffix (4.0.4)
+    public_suffix (5.0.0)
     rake (13.0.1)
     redcarpet (3.5.0)
     redis (4.1.3)
